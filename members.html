@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Members</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f4f6f8;
+        }
+
+        /* HEADER */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        /* BUTTON */
+        .back-btn {
+            background: #27ae60;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* TABLE */
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER WITH BACK BUTTON -->
+<header>
+    <h2>Existing Members</h2>
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+</header>
+
+<!-- TABLE -->
+<table>
+    <thead>
+        <tr>
+            <th>Flat No</th>
+            <th>Name</th>
+            <th>Contact</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+    const members = [
+        {flat:101, name:"Rahul Sharma", contact:"9876543210"},
+        {flat:102, name:"Amit Patil", contact:"9876543211"},
+        {flat:103, name:"Neha Singh", contact:"9876543212"},
+        {flat:104, name:"Priya Mehta", contact:"9876543213"},
+        {flat:105, name:"Rohit Verma", contact:"9876543214"},
+        {flat:106, name:"Sneha Joshi", contact:"9876543215"},
+        {flat:107, name:"Vikas Gupta", contact:"9876543216"},
+        {flat:108, name:"Anjali Desai", contact:"9876543217"},
+        {flat:109, name:"Manish Kumar", contact:"9876543218"},
+        {flat:110, name:"Karan Shah", contact:"9876543219"}
+    ];
+
+    let table = document.getElementById("tableBody");
+
+    members.forEach(member => {
+        table.innerHTML += `
+            <tr>
+                <td>${member.flat}</td>
+                <td>${member.name}</td>
+                <td>${member.contact}</td>
+            </tr>
+        `;
+    });
+</script>
+
+</body>
+</html>
