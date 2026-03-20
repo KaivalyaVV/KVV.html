@@ -29,7 +29,7 @@ header {
 nav {
     background: #34495e;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -44,7 +44,7 @@ nav a:hover {
     background: #2c3e50;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2') no-repeat center/cover;
     height: 300px;
@@ -57,7 +57,7 @@ nav a:hover {
     padding: 10px;
 }
 
-/* CONTAINER */
+/* GRID */
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -65,7 +65,7 @@ nav a:hover {
     padding: 20px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
     background: white;
     padding: 15px;
@@ -78,9 +78,9 @@ button {
     background: #27ae60;
     color: white;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
+    padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
@@ -95,17 +95,8 @@ footer {
     padding: 10px;
 }
 
-/* 📱 MOBILE RESPONSIVE */
+/* 📱 MOBILE VIEW */
 @media (max-width: 768px) {
-
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        height: 200px;
-        font-size: 20px;
-    }
 
     nav {
         flex-direction: column;
@@ -116,6 +107,28 @@ footer {
         width: 100%;
         text-align: center;
         border-top: 1px solid #555;
+    }
+
+    .hero {
+        height: 200px;
+        font-size: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 📱 EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+    .hero {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
     }
 }
 </style>
@@ -145,16 +158,16 @@ footer {
     <div class="card">
         <h2>About Society</h2>
         <p>
-            Green Residency is a modern housing society with a safe and friendly environment.
+            Green Residency is a modern housing society providing a safe and peaceful environment.
         </p>
     </div>
 
     <div class="card">
         <h2>Latest Notices</h2>
         <ul>
-            <li>Water maintenance Sunday</li>
+            <li>Water maintenance on Sunday</li>
             <li>Meeting on 25th</li>
-            <li>Parking update</li>
+            <li>Parking rules updated</li>
         </ul>
     </div>
 
